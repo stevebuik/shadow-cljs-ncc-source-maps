@@ -1,0 +1,7 @@
+{:deps   true
+ :builds {:computer {:modules          {:main {:entries [user-info.app]}}
+                     :output-to        "public/computer.js"
+                     :compiler-options {:source-map true}
+                     :exports-var      computer/ask
+                     :target           :node-library}}
+ }

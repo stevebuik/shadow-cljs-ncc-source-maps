@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "shadow-cljs": "^2.25.8",
+    "@vercel/ncc": "^0.38.0"
+  },
+  "scripts": {
+    "release": "shadow-cljs release computer",
+    "why": "node -e \"console.log(require('./public/computer.js').call(null,'why?'))\"",
+    "how": "node -e \"console.log(require('./public/computer.js').call(null,'how?'))\"",
+    "ncc": "npx ncc build public/computer.js --minify --debug --source-map --out public/dist",
+    "ncc-why": "node -e \"console.log(require('./public/dist/index.js').call(null,'why?'))\"",
+    "ncc-how": "node -e \"console.log(require('./public/dist/index.js').call(null,'how?'))\""
+  }
+}
